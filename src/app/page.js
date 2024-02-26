@@ -3,7 +3,7 @@
 import useSWR from "swr";
 import storage from "../utils/storage";
 import Navbar from '../components/navbar';
-import HomePage from '../components/homepage';
+import CompanyHomePage from '../app/company/page';
 import checkLogin from '../utils/checkLogin';
 import Maybe from '../components/maybe';
 import React from 'react';
@@ -21,7 +21,7 @@ export default function Home() {
           <h1>Logged In</h1>
         </Maybe>
         <Maybe test={!isLoggedIn}>
-          <HomePage />
+          <CompanyHomePage />
         </Maybe>
       </div>
     </div>

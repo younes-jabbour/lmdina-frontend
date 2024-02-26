@@ -17,11 +17,13 @@
     "react-toastify": "^9.1.2",
     "swr": "^2.2.4",
     "axios": "^1.5.1"
+    "swiper": "^11.0.6"
   },
   "devDependencies": {
     "@types/node": "^20.11.20",
     "@types/react": "18.2.58",
     "autoprefixer": "^10.0.1",
+    "daisyui": "^4.7.2",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
     "postcss": "^8",

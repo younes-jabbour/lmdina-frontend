@@ -1,15 +1,15 @@
 'use client';
-
-import useSWR from "swr";
-import storage from "../utils/storage";
+import useSWR from 'swr';
+import storage from '../utils/storage';
 import Navbar from '../components/navbar';
-import CompanyHomePage from '../app/company/page';
+import TouristHomePage from './tourist/page';
+import CompanyHomePage from './company/page';
 import checkLogin from '../utils/checkLogin';
 import Maybe from '../components/maybe';
 import React from 'react';
 
 export default function Home() {
-  const {data: currentUser, isLoading, isError} = useSWR("user", storage);
+  const { data: currentUser, isLoading, isError } = useSWR('user', storage);
 
   const isLoggedIn = checkLogin(currentUser);
 

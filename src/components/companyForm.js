@@ -18,7 +18,7 @@ const Form = () => {
   return (
     <form
       onSubmit={handleSubmit(submitHandler)}
-      className="flex justify-center items-center flex-col"
+      className="flex justify-center items-center flex-col z-10"
     >
       <input
         type="text"

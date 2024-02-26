@@ -14,12 +14,15 @@ const Modal = () => {
         <h1 className="mr-3">
           Your account as a company owner is disabled to enabled fill the form
         </h1>
-        <button onClick={toggleModal} className="bg-white border border-black p-2">
+        <button
+          onClick={toggleModal}
+          className="bg-white border border-black p-2"
+        >
           Open Modal
         </button>
       </div>
       {showModal && (
-        <div className="modal absolute left-1/2 transform -translate-x-1/2 my-24 bg-gray-200 p-4 rounded-lg">
+        <div className="absolute left-1/2 transform -translate-x-1/2 my-24 bg-gray-200 p-4 rounded-lg">
           <div className="modal-content">
             <span className="close" onClick={toggleModal}>
               &times;

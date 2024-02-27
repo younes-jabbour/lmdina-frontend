@@ -20,14 +20,18 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "src/utils/checkLogin.ts", "src/utils/constant.ts", "src/utils/storage.ts"  ],
+    "**/*.tsx",
+    "src/utils/checkLogin.ts",
+    "src/utils/constant.ts",
+    "src/utils/storage.ts"
+  ],
   "exclude": [
     "node_modules"
   ]

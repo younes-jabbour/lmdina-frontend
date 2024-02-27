@@ -1,4 +1,7 @@
-import React, { useState} from "react";
+"use client";
+
+import React, { useState } from "react";
+import Link from "next/link";
 
 function Navbar() {
   const [isConnnected, setisConnnected] = useState(false);
@@ -38,7 +41,9 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-2xl font-bold">Lmdina</a>
+        <Link href="/">
+          <button className="btn btn-ghost text-2xl font-bold">Lmdina</button>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 font-medium text-base">
@@ -80,15 +85,18 @@ function Navbar() {
           </div>
         )}
 
-        {!isConnnected
-          ? (
-            <div className="navbar-end">
-              <a className="btn btn-ghost mr-2">Login</a>
-              <a className="btn btn-primary">Sign up</a>
-            </div>
-          )
-          : null
-        }
+        {!isConnnected && (
+          <div className="navbar-end ">
+            <Link href="/login">
+              <label className="hidden sm:btn sm:btn-ghost sm:mr-2">
+                Login
+              </label>
+            </Link>
+            <Link href="/register">
+              <label className="hidden sm:btn sm:btn-primary">Sign up</label>
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -9,7 +9,6 @@ import checkLogin from '../utils/checkLogin';
 const Navbar = () => {
   const { data: currentUser } = useSWR('user', storage);
   const isLoggedIn = checkLogin(currentUser);
-  const router = useRouter();
 
   const handleSignOut = () => {
     localStorage.clear();

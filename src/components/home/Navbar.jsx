@@ -1,9 +1,24 @@
-import React, { useState} from "react";
+"use client";
+
+import React, { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import Maybe from "../../components/maybe";
+import useSWR from "swr";
+import storage from "../../utils/storage";
+import checkLogin from "../../utils/checkLogin";
 
 function Navbar() {
   const [isConnnected, setisConnnected] = useState(false);
+  const { data: currentUser } = useSWR("user", storage);
+  const isLoggedIn = checkLogin(currentUser);
+
+  const handleSignOut = () => {
+    localStorage.clear();
+    window.location.reload();
+  };
+
   return (
-    // TODO : Add the navbar
     <div className="navbar bg-base-100 border-b border-slate-200 border-solid">
       <div className="navbar-start">
         <div className="dropdown">
@@ -27,30 +42,44 @@ function Navbar() {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li>
-              <a>events</a>
-            </li>
-            <li>
-              <a>culture</a>
-            </li>
-            <li>
-              <a>matche</a>
-            </li>
+            <Link href="/events">
+              <li>
+                <button>events</button>
+              </li>
+            </Link>
+            <Link href="/culture">
+              <li>
+                <button>culture</button>
+              </li>
+            </Link>
+            <Link href="/matches">
+              <li>
+                <button>matche</button>
+              </li>
+            </Link>
           </ul>
         </div>
-        <a className="btn btn-ghost text-2xl font-bold">Lmdina</a>
+        <Link href="/">
+          <button className="btn btn-ghost text-2xl font-bold">Lmdina</button>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 font-medium text-base">
-          <li>
-            <a>events</a>
-          </li>
-          <li>
-            <a>culture</a>
-          </li>
-          <li>
-            <a>matches</a>
-          </li>
+          <Link href="/events">
+            <li>
+              <button>events</button>
+            </li>
+          </Link>
+          <Link href="/culture">
+            <li>
+              <button>culture</button>
+            </li>
+          </Link>
+          <Link href="/matches">
+            <li>
+              <button>matches</button>
+            </li>
+          </Link>
         </ul>
       </div>
 
@@ -73,22 +102,22 @@ function Navbar() {
               <li>
                 <a className="justify-between">Profile</a>
               </li>
-              <li className="text-red-600">
-                <a>Logout</a>
-              </li>
             </ul>
           </div>
         )}
 
-        {!isConnnected
-          ? (
-            <div className="navbar-end">
-              <a className="btn btn-ghost mr-2">Login</a>
-              <a className="btn btn-primary">Sign up</a>
-            </div>
-          )
-          : null
-        }
+        {!isConnnected && (
+          <div className="navbar-end ">
+            <Link href="/login">
+              <label className="hidden sm:btn sm:btn-ghost sm:mr-2">
+                Login
+              </label>
+            </Link>
+            <Link href="/register">
+              <label className="hidden sm:btn sm:btn-neutral">Sign up</label>
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

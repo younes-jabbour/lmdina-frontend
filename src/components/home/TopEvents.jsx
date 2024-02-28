@@ -65,7 +65,7 @@ function TopEvents() {
     <div>
       <div className="w-fit mx-auto mt-20 flex flex-col items-center">
         <h6 className="font-bold text-lg text-blue-600">Top events</h6>
-        <h1 className=" font-extrabold  text-3xl sm:text-4xl mx:text-6xl">
+        <h1 className="font-extrabold  text-3xl mb-5 sm:text-4xl mx:text-6xl">
           Explore Top <span>Morrocan</span>{" "}events
         </h1>
       </div>

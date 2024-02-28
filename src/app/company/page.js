@@ -1,9 +1,6 @@
-'use client'
+import { CompanyDashboard } from '../../components/component/company-dashboard';
+import { CompanyForm } from '../../components/component/company-form';
 
-import Modal from '../../components/companyModal'
-
-export default function CompanyHomePage(){
-    return (
-        <Modal />
-    )
+export default function CompanyHomePage() {
+  return <CompanyDashboard />;
 }

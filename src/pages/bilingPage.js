@@ -1,4 +1,4 @@
-import { PaymentCards } from '../../../components/component/payment-cards';
+import { PaymentCards } from '../components/component/payment-cards';
 
 export default function BillingPage() {
   const isEnabled = false;

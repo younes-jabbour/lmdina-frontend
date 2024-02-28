@@ -1,5 +1,4 @@
-// components/Form.js
-import LocationPicker from './LocationPicker';
+
 import { useForm } from 'react-hook-form';
 
 const Form = () => {

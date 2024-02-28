@@ -1,6 +1,6 @@
-import { SearchIcon } from 'lucide-react';
-import { Input } from 'src/components/ui/input';
-import { Button } from 'src/components/ui/button';
+import { SearchIcon } from "lucide-react";
+import { Input } from "../../components/ui/input";
+import { Button } from "../../components/ui/button";
 import {
   DropdownMenuTrigger,
   DropdownMenuLabel,
@@ -8,17 +8,10 @@ import {
   DropdownMenuItem,
   DropdownMenuContent,
   DropdownMenu,
-} from 'src/components/ui/dropdown-menu';
-import {
-  TableHead,
-  TableRow,
-  TableHeader,
-  TableCell,
-  TableBody,
-  Table,
-} from 'src/components/ui/table';
-import Link from 'next/link';
-import Image from 'next/image';
+} from "../../components/ui/dropdown-menu";
+
+import Link from "next/link";
+import Image from "next/image";
 
 export function Header() {
   return (
@@ -51,19 +44,15 @@ export function Header() {
         </form>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button
-              className="rounded-full border border-gray-200 w-8 h-8 dark:border-gray-800"
-              size="icon"
-              variant="ghost"
-            >
+            <Button className="rounded-full border border-gray-200 w-8 h-8 dark:border-gray-800">
               <img
                 alt="Avatar"
                 className="rounded-full"
                 height="32"
                 src="/placeholder.svg"
                 style={{
-                  aspectRatio: '32/32',
-                  objectFit: 'cover',
+                  aspectRatio: "32/32",
+                  objectFit: "cover",
                 }}
                 width="32"
               />

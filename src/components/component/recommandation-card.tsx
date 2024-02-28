@@ -1,5 +1,5 @@
-import { Button } from "src/components/ui/button"
-import { CardContent, Card } from "src/components/ui/card"
+import { Button } from "../../components/ui/button"
+import { CardContent, Card } from "../../components/ui/card"
 
 export function RecommandationCard() {
   return (

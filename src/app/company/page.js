@@ -2,7 +2,7 @@
 
 import Modal from '../../components/companyModal'
 
-export default function CompanyHomePage(){
+export default function Company(){
     return (
         <Modal />
     )

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function Card(props) {
@@ -18,13 +19,13 @@ function Card(props) {
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
-      stroke-width="1.5"
+      strokeWidth="1.5"
       stroke="currentColor"
-      class="w-4 h-4"
+      className="w-4 h-4"
     >
       <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"
       />
     </svg>
@@ -58,7 +59,9 @@ function Card(props) {
             </span>{" "}
             \person
           </span>
-          <button className="btn btn-outline">details {flesh}</button>
+          <Link href="/eventPage">
+            <button className="btn btn-outline">details {flesh}</button>
+          </Link>
         </div>
       </div>
     </div>

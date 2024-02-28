@@ -1,6 +1,4 @@
-// components/Form.js
-import LocationPicker from './LocationPicker';
-import { useForm } from 'react-hook-form';
+import { useForm } from "react-hook-form";
 
 const Form = () => {
   const {
@@ -12,7 +10,7 @@ const Form = () => {
 
   const submitHandler = () => {
     // Handle form submission here
-    console.log('Form submitted:', getValues());
+    console.log("Form submitted:", getValues());
   };
 
   return (
@@ -25,8 +23,8 @@ const Form = () => {
         id="companyName"
         placeholder="Company Name"
         className="w-full border rounded-md px-3 py-2 mb-2"
-        {...register('companyName', {
-          required: 'Please enter company name',
+        {...register("companyName", {
+          required: "Please enter company name",
         })}
       />
       {errors.companyName && (
@@ -37,8 +35,8 @@ const Form = () => {
         id="phoneNumber"
         placeholder="Phone Number"
         className="w-full border rounded-md px-3 py-2 mb-2"
-        {...register('phoneNumber', {
-          required: 'Please enter phone number',
+        {...register("phoneNumber", {
+          required: "Please enter phone number",
         })}
       />
       {errors.phoneNumber && (
@@ -49,11 +47,11 @@ const Form = () => {
         id="email"
         placeholder="Email"
         className="w-full border rounded-md px-3 py-2 mb-2"
-        {...register('email', {
-          required: 'Please enter email',
+        {...register("email", {
+          required: "Please enter email",
           pattern: {
             value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/i,
-            message: 'Please enter valid email',
+            message: "Please enter valid email",
           },
         })}
       />
@@ -71,8 +69,8 @@ const Form = () => {
         id="fileInput"
         multiple // Allow multiple files
         className="w-full border rounded-md px-3 py-2 mb-2 hidden"
-        {...register('fileInput', {
-          required: 'Please choose file',
+        {...register("fileInput", {
+          required: "Please choose file",
         })}
       />
       {errors.fileInput && <p className="text-red-500">Please select a file</p>}

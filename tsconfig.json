@@ -31,7 +31,7 @@
     "src/utils/checkLogin.ts",
     "src/utils/constant.ts",
     "src/utils/storage.ts"
-  ],
+, "src/components/component/event-form.js", "src/components/component/company-form.js"  ],
   "exclude": [
     "node_modules"
   ]

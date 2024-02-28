@@ -1,10 +1,7 @@
-import "./globals.css";
+import './globals.css';
+import Navbar from '../components/home/Navbar';
+import Footer from '../components/home/Footer';
+
 export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body className="relative h-screen bg-gray-100">
-        <div className="m-2">{children}</div>
-      </body>
-    </html>
-  );
+  return <>{children}</>;
 }

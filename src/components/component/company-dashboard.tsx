@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import { Input } from 'src/components/ui/input';
-import { Button } from 'src/components/ui/button';
-import { Header } from 'src/components/component/header';
+import Link from "next/link";
+import { Input } from "../../components/ui/input";
+import { Button } from "../../components/ui/button";
+import { Header } from "../../components/component/header";
 import {
   DropdownMenuTrigger,
   DropdownMenuLabel,
@@ -9,7 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuContent,
   DropdownMenu,
-} from 'src/components/ui/dropdown-menu';
+} from "../../components/ui/dropdown-menu";
 import {
   TableHead,
   TableRow,
@@ -17,7 +17,7 @@ import {
   TableCell,
   TableBody,
   Table,
-} from 'src/components/ui/table';
+} from "../../components/ui/table";
 
 export function CompanyDashboard() {
   return (
@@ -26,7 +26,7 @@ export function CompanyDashboard() {
       <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-6">
         <div className="flex items-center gap-4">
           <h1 className="font-semibold text-lg md:text-2xl">Events</h1>
-          <Button className="ml-auto" size="sm">
+          <Button className="ml-auto">
             <Link href="/company/newEvent">Add event</Link>
           </Button>
         </div>
@@ -41,7 +41,9 @@ export function CompanyDashboard() {
             </TableHeader>
             <TableBody>
               <TableRow>
-                <TableCell className="font-medium"><Link href="/company/acme.com">acme.com</Link></TableCell>
+                <TableCell className="font-medium">
+                  <Link href="/company/acme.com">acme.com</Link>
+                </TableCell>
                 <TableCell>2023-10-10</TableCell>
                 <TableCell>Active</TableCell>
               </TableRow>
@@ -73,11 +75,11 @@ export function CompanyDashboard() {
             <span className="font-medium">1-5 of 100</span>
           </div>
           <div className="flex items-center gap-2">
-            <Button className="rounded-full" size="icon" variant="outline">
+            <Button className="rounded-full">
               <ChevronLeftIcon className="h-4 w-4" />
               <span className="sr-only">Previous</span>
             </Button>
-            <Button className="rounded-full" size="icon" variant="outline">
+            <Button className="rounded-full">
               <ChevronRightIcon className="h-4 w-4" />
               <span className="sr-only">Next</span>
             </Button>
